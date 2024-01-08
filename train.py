@@ -120,7 +120,7 @@ def train_epoch():
     global prev_time
     denoise_generator.train()
     train_data = trainset(train_name_list, train_coordinate_list, train_noise_img, stack_index)
-    trainloader = DataLoader(train_data, batch_size=opt.batch_size, shuffle=True, num_workers=4)
+    trainloader = DataLoader(train_data, batch_size=opt.batch_size, shuffle=True)
 
     for iteration, noisy in enumerate(trainloader):
 
